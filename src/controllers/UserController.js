@@ -4,9 +4,9 @@ class UserController {
   async store(req, res) {
     try {
       const novoUser = await User.create({
-        nome: 'Muriel',
-        email: 'daleas@gmail.com',
-        password: '12313121',
+        nome: 'Aloalo',
+        email: 'aloalo@gmail.com',
+        password: 'qwert123',
       });
       res.json(novoUser);
     } catch (e) {
