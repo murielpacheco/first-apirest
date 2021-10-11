@@ -3,11 +3,13 @@ import userController from '../controllers/UserController';
 
 const router = new Router();
 
+// nao deveria existir
+router.get('/', userController.index); // lista usuários
+router.get('/:id', userController.show); // mostrar usuário
+
 router.post('/', userController.store);
-router.get('/', userController.index);
-router.get('/:id', userController.show);
-router.put('/:id', userController.update);
-router.delete('/:id', userController.delete);
+router.put('/', userController.update);
+router.delete('/', userController.delete);
 
 export default router;
 
